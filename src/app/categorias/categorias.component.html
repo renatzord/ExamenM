@@ -28,7 +28,7 @@
                 <label for="" class="col-form-label col-sm-2">Seleccione su categoria</label>
                 <div class="col-sm-6">
                     <select  name="TipoSelect" (change)="seleccionT($event)" class="form-select" aria-label="Default select example">
-                        <option selected disabled value="0">Seleccione</option>
+                        
                         <option #TSelect *ngFor="let categoria of Categoria" value="{{categoria.id_categoria}}">{{categoria.nombre_categoria}}</option>
                         
                       </select>

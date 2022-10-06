@@ -13,7 +13,7 @@ import { CategoriasService } from './categorias.service';
 export class CategoriasComponent implements OnInit {
   opcionSeleccionado: string  = '0';
   Categoria : Categorias[]= []
-  idC?:number;
+  idC:number=0;
   public categoria : Categorias= new Categorias()
   public preferencia: Preferencias = new Preferencias()
 
@@ -43,7 +43,7 @@ export class CategoriasComponent implements OnInit {
   }
 
   CrearPreferencia(){
-
+    this.preferencia.id_categoria = this.idC
     this.PreferenicaSV.create(this.preferencia).subscribe( 
       Response=>this.router.navigate([""])
     )
