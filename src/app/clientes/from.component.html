@@ -1,0 +1,80 @@
+<div class="card bg-dark text-white">
+    <div class="card-header">{{titulo}}</div>
+    <div class="card-body">
+
+        <form (ngSubmit)="create()">
+
+            <div class="form-group row">
+                <label for="" class="col-form-label col-sm-2">Cedula</label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" [(ngModel)]="cliente.cedula" name="nombre">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="" class="col-form-label col-sm-2">Nombre</label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" [(ngModel)]="cliente.nombres" name="nombre">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="" class="col-form-label col-sm-2">Apellido</label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" [(ngModel)]="cliente.apellidos" name="apellido">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="" class="col-form-label col-sm-2">Genero</label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" [(ngModel)]="cliente.genero" name="nombre">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="" class="col-form-label col-sm-2">Estado Civil</label>
+                <div class="col-sm-6">
+                    <!--El ngModel va en el <select> Si no le cambias a input-->
+                    <select   name="TipoSelect" [(ngModel)]="cliente.estado_civil" class="form-select" aria-label="Default select example">
+                        <option selected disabled value="0">Seleccione</option>
+                        <option  value="0">Seleccione</option>
+                        <option  value="Soltero">Soltero</option>
+                        <option  value="Casado">Casado</option>
+                        <option  value="Divorciado">Divorciado</option>
+                        <option  value="Viudo">Viudo</option>
+                    </select>
+                </div>
+            </div>
+            
+            
+            <div class="form-group row">
+                <label for="" class="col-form-label col-sm-2">Email</label>
+                <div class="col-sm-6">
+                    <input type="email" class="form-control" [(ngModel)]="cliente.correo">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="" class="col-form-label col-sm-2">Telefono</label>
+                <div class="col-sm-6">
+                    <input type="number" class="form-control" [(ngModel)]="cliente.telefono" name="nombre">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="" class="col-form-label col-sm-2">Fecha de Nacimiento</label>
+                <div class="col-sm-6">
+                    <input type="date" class="form-control" [(ngModel)]="cliente.fecha_nacimiento" name="nombre">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-sm-6">
+                    <button class="btn btn-primary" role="button">Crear</button>
+                </div>
+            </div>
+
+        </form>
+    </div>
+</div>
