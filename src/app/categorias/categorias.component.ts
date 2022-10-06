@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Preferencias } from '../preferencias/preferencias';
 import { PreferenciasService } from '../preferencias/preferencias.service';
 import { Categorias } from './categorias';
@@ -18,7 +19,8 @@ export class CategoriasComponent implements OnInit {
 
   constructor(
     private ListarC : CategoriasService,
-    private PreferenicaSV: PreferenciasService
+    private PreferenicaSV: PreferenciasService,
+    private router:Router
   ) { }
 
   ngOnInit(): void {
@@ -35,12 +37,16 @@ export class CategoriasComponent implements OnInit {
 
   CrearCategoria(){
     this.ListarC.create(this.categoria).subscribe(
+      Response=>this.router.navigate([""])
     
     )
   }
 
   CrearPreferencia(){
-    this.PreferenicaSV.create(this.preferencia).subscribe()
+
+    this.PreferenicaSV.create(this.preferencia).subscribe( 
+      Response=>this.router.navigate([""])
+    )
   }
 
 }

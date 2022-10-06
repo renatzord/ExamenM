@@ -7,7 +7,7 @@ import {Preferencias} from './preferencias'
   providedIn: 'root'
 })
 export class PreferenciasService {
-  private urlPreferencias:string='http://localhost:8080/api/listarautor';
+  private urlPreferencias:string='http://localhost:8080/api/crearPreferencias';
 
   private httpHeaders = new HttpHeaders({ 'Content-Type': 'application/json'})
 

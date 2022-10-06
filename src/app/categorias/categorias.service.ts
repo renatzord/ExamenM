@@ -8,12 +8,14 @@ import {Categorias} from './categorias';
 })
 export class CategoriasService {
   
-  private urlendpoint:string='http://localhost:8080/api/listarautor';
+  private urlendpoint:string='http://localhost:8080/api/crearCategorias';
+  private urlendpoint1:string='http://localhost:8080/api/listarCategorias';
+ 
 
   constructor(private http:HttpClient) { }  
   private httpHeaders = new HttpHeaders({ 'Content-Type': 'application/json'})
   obtenerCategorias(): Observable<Categorias[]> {
-    return this.http.get<Categorias[]>(this.urlendpoint);
+    return this.http.get<Categorias[]>(this.urlendpoint1);
   }
 
   create(cliente:Categorias): Observable<Categorias>{

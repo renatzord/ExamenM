@@ -10,8 +10,8 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class ClienteService {
 
-private urlEndpoint:string='http://localhost:8080/api/clientes';
-private urlEndpoint1:string='http://localhost:8080/api/crear';
+private urlEndpoint:string='http://localhost:8080/api/listaCliente';
+private urlEndpoint1:string='http://localhost:8080/api/crearCliente';
 
 private httpHeaders = new HttpHeaders({ 'Content-Type': 'application/json'})
 
